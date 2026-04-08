@@ -261,6 +261,23 @@ html[lang="ar"] .logo img[lang="en"] {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  position: relative;
+}
+
+/* Hero overlay — ensures text is readable over any background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px 30px 0 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.60) 0%,
+    rgba(0, 0, 0, 0.25) 60%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -1291,9 +1308,10 @@ html {
   height: 30px;
   object-fit: contain;
   border: 1px solid rgb(220, 220, 220);
-  border-radius: 50%;
+  border-radius: 30%;
   background-color: var(--light);
   margin-bottom: 5px;
+  padding: 1px;
 }
 
 .timeline-content:hover {
@@ -1354,11 +1372,12 @@ html[dir="rtl"] .timeline-item:nth-child(even) {
   }
 
   html[dir="ltr"] .timeline-dot {
-    left: 30px;
+    left: 22px;
+    top: 45px;
     transform: none;
   }
   html[dir="rtl"] .timeline-dot {
-    right: 30px;
+    right: 22px;
     transform: none;
   }
 }
