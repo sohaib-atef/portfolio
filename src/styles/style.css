@@ -258,6 +258,7 @@ html[lang="ar"] .logo img[lang="en"] {
   background-color: var(--dark);
   background-image: url("../images/cover-image.jpg");
   background-position-x: right;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
@@ -838,6 +839,7 @@ html[dir="rtl"] .footer-col h3::after {
   justify-content: center;
   color: var(--white);
   transition: var(--transition);
+  text-decoration: none;
 }
 
 .social-links a:hover {
@@ -964,6 +966,10 @@ html[dir="rtl"] .footer-col h3::after {
   .hero-image {
     height: 400px;
     order: -1;
+  }
+
+  .hero::before {
+    border-radius: 0;
   }
 
   .hero-description {
@@ -1186,6 +1192,14 @@ html[dir="rtl"] .footer-col h3::after {
     font-size: 1.5rem;
     justify-self: end;
   }
+
+  /* .job-name-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 5px;
+  } */
 
   .projects-container {
     overflow: hidden;
